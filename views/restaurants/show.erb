@@ -1,0 +1,10 @@
+<%= erb :header %>
+
+<h1><%= @restaurant['name'] %></h1>
+<p>Phone: <%= @restaurant['phone_number'] %></p>
+<h3>Menu Items</h3>
+<ul>
+  <% @menu_items.each do |menu_item| %>
+	  <li><%= menu_item['name'] %>: $<%= menu_item['price'] %>0</li>
+  <% end %>
+</ul>
